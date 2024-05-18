@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IO.Swagger</name>
+    </assembly>
+    <members>
+        <member name="T:IO.Swagger.Attributes.ValidateModelStateAttribute">
+            <summary>
+            Model state validation attribute
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Called before the action method is invoked
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:IO.Swagger.Controllers.ArithmeticApiController">
+            <summary>
+            AritmeticController
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Controllers.ArithmeticApiController.#ctor(IO.Swagger.Services.ICalculationService,IO.Swagger.Services.IJwtTokenService)">
+            <Summary>
+             Set ArithmeticApiController ICalculationService
+            </Summary>
+        </member>
+        <member name="M:IO.Swagger.Controllers.ArithmeticApiController.Calculate(System.String,IO.Swagger.Models.OperationRequest)">
+            <Summary>
+             Post Calculate
+            </Summary>
+        </member>
+        <member name="M:IO.Swagger.Controllers.ArithmeticApiController.GenerateToken(IO.Swagger.Models.UserModel)">
+            <Summary>
+             Post Calculate
+            </Summary>
+        </member>
+        <member name="T:IO.Swagger.Filters.BasePathFilter">
+            <summary>
+            BasePath Document Filter sets BasePath property of Swagger and removes it from the individual URL paths
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Filters.BasePathFilter.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="basePath">BasePath to remove from Operations</param>
+        </member>
+        <member name="P:IO.Swagger.Filters.BasePathFilter.BasePath">
+            <summary>
+            Gets the BasePath of the Swagger Doc
+            </summary>
+            <returns>The BasePath of the Swagger Doc</returns>
+        </member>
+        <member name="M:IO.Swagger.Filters.BasePathFilter.Apply(Microsoft.OpenApi.Models.OpenApiDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <summary>
+            Apply the filter
+            </summary>
+            <param name="swaggerDoc">OpenApiDocument</param>
+            <param name="context">FilterContext</param>
+        </member>
+        <member name="T:IO.Swagger.Filters.GeneratePathParamsValidationFilter">
+            <summary>
+            Path Parameter Validation Rules Filter
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Filters.GeneratePathParamsValidationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="operation">Operation</param>
+            <param name="context">OperationFilterContext</param>
+        </member>
+        <member name="T:IO.Swagger.Models.OperationRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Models.OperationRequest.Number1">
+            <summary>
+            Gets or Sets Number1
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Models.OperationRequest.Number2">
+            <summary>
+            Gets or Sets Number2
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:IO.Swagger.Models.UserModel" -->
+        <!-- Badly formed XML comment ignored for member "P:IO.Swagger.Models.UserModel.Username" -->
+        <member name="T:IO.Swagger.Program">
+            <summary>
+            Program
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:IO.Swagger.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            Create the web host builder.
+            </summary>
+            <param name="args"></param>
+            <returns>IWebHostBuilder</returns>
+        </member>
+        <member name="T:IO.Swagger.Security.BearerAuthenticationHandler">
+            <summary>
+            class to handle bearer authentication.
+            </summary>
+        </member>
+        <member name="F:IO.Swagger.Security.BearerAuthenticationHandler.SchemeName">
+            <summary>
+            scheme name for authentication handler.
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Security.BearerAuthenticationHandler.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.AspNetCore.Authentication.AuthenticationSchemeOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.AspNetCore.Authentication.ISystemClock)">
+            <summary>
+            BearerAuthenticationHandler
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Security.BearerAuthenticationHandler.HandleAuthenticateAsync">
+            <summary>
+            verify that require authorization header exists.
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Services.CalculationService">
+             <summary>
+            CalculationService
+             </summary>
+        </member>
+        <member name="M:IO.Swagger.Services.CalculationService.PerformCalculation(IO.Swagger.Models.OperationRequest,System.String)">
+             <summary>
+            PerformCalculation method
+             </summary>
+        </member>
+        <member name="T:IO.Swagger.Services.ICalculationService">
+            <summary>
+            Interface ICalculationService
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Services.ICalculationService.PerformCalculation(IO.Swagger.Models.OperationRequest,System.String)">
+            <summary>
+            PerformCalculation method
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Services.IJwtTokenService">
+             <summary>
+            IJwtTokenService
+             </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:IO.Swagger.Services.IJwtTokenService.GenerateToken(System.String)" -->
+        <member name="T:IO.Swagger.Services.JwtTokenService">
+            <Summary>
+             JwtTokenService
+            </Summary>
+        </member>
+        <member name="M:IO.Swagger.Services.JwtTokenService.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <Summary>
+             JwtTokenService
+            </Summary>
+        </member>
+        <member name="M:IO.Swagger.Services.JwtTokenService.GenerateToken(System.String)">
+            <Summary>
+             GenerateToken
+            </Summary>
+        </member>
+        <member name="T:IO.Swagger.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Startup.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="env"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:IO.Swagger.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:IO.Swagger.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configuration
+            </summary>
+        </member>
+    </members>
+</doc>
